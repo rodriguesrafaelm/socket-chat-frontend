@@ -1,0 +1,116 @@
+.mainCSS {
+  padding: 0px;
+  margin: 0px;
+}
+/* 
+.mainChatBox {
+  min-width: 100%;
+} */
+
+
+
+.chatMaster {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.chatContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+  height: 100%;
+  width: 100%;
+  max-width: 1100px;
+}
+
+
+
+/* Relacionados aos usuários online */
+/* .userList {
+  padding: 10px 0;
+  font-size: larger;
+  background-color: lightblue;
+  width: 20%;
+  border-radius: 10px;
+} */
+
+.userBox {
+  width: 20%;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.userBox h3 {
+  padding: 0 0px 0 20%;
+  font-size: 90%;
+}
+.userList {
+  padding: 2px 0px 0px 0px;
+  
+}
+
+.userName {
+  padding: 2px 6px;
+  font-size: 90%;
+}
+
+/* Relacionados a mensagens */
+
+.userInputs {
+  width: 60%;
+  height: 30%;
+}
+
+.messageWindow {
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    max-height: 250px;
+    min-height: 300px;
+    height: 70%;
+    width: 99%;
+    border: 2px solid black;
+    border-radius: 10px;
+    resize: "none"
+  }
+
+.messageWindowContent {
+
+  padding: 4px 0px 0px 10px;
+  font-size: 14px;
+}
+
+.messageInput {
+  padding: 20px 0px 0px 0px;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  white-space: nowrap;
+}
+
+
+.messageText {
+  border: 1px solid #1da1f2;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 85%;
+  padding: 4px 10px 0px;
+}
+
+.messageButton {
+  margin-left: 10px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 15%;
+  min-width: 50px;
+}
+
+

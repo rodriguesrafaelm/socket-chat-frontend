@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Socket } from 'socket.io-client';
-import styles from '../../../styles/main.module.css'
+import styles from '../../../../styles/main.module.css'
 
 interface UserListProps {
-  socket: Socket;
+  socket: Socket | undefined;
 }
 interface User {
   id: string;
@@ -11,10 +11,10 @@ interface User {
 }
 
 const UserList: React.FC<UserListProps> = ({socket}) => {
-  const [users, setUsers] = useState<User[]>([])
-  socket.on('userList', (content) => {
+  const [users, setUsers] = useState<User[]>([]);
+  socket?.on('userList', (content) => {
     setUsers(content)
-  })
+  });
 
   return (
     <div className=''>
@@ -24,7 +24,7 @@ const UserList: React.FC<UserListProps> = ({socket}) => {
               return (
               <div key={user.id} className={styles.userName}>
                {user.username}
-              </div>)
+              </div>);
             })}
         </div>
     </div>

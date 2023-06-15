@@ -1,6 +1,5 @@
-"use client";
 import React, { useRef, useEffect, useMemo, useState } from 'react';
-import styles from "../../../styles/main.module.css"
+import styles from '../../../../styles/main.module.css'
 import { Socket } from 'socket.io-client';
 
 interface Message {
@@ -8,12 +7,9 @@ interface Message {
     message: string
 }
 
-interface MessageContainerRef {
-    current: HTMLDivElement | null;
-  }
 
 interface MessageDisplayProps {
-    socket: Socket
+    socket: Socket | undefined
 }
 
 
@@ -27,17 +23,17 @@ const MessageDisplay: React.FC<MessageDisplayProps> = ({ socket })  => {
         }
 
         const handleBeforeUnload = () => {
-            socket.disconnect();
+            socket?.disconnect();
             };
 
-        socket.on('previousMessages', handleMessage);
-        socket.on('message', handleMessage);
+        socket?.on('previousMessages', handleMessage);
+        socket?.on('message', handleMessage);
         window.addEventListener('beforeunload', handleBeforeUnload);
 
         return () => {
-            socket.off('connect');
-            socket.off('message');
-            socket.off('previousMessages');
+            socket?.off('connect');
+            socket?.off('message');
+            socket?.off('previousMessages');
             window.removeEventListener('beforeunload', handleBeforeUnload);
         };
         }, [messages, socket]);

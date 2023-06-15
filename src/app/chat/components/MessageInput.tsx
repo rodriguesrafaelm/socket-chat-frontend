@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from '../../../styles/main.module.css';
+import styles from '../../../../styles/main.module.css'
 import { Socket } from 'socket.io-client';
 
 interface Mensagem {
@@ -8,10 +8,11 @@ interface Mensagem {
 }
 
 interface MessageInputProps {
-  socket: Socket;
+  socket: Socket | undefined;
+  username: string;
 }
 
-const MessageInput: React.FC<MessageInputProps> = ({ socket }) => {
+const MessageInput: React.FC<MessageInputProps> = ({ socket, username }) => {
   const [mensagens, setMensagens] = useState<Mensagem[]>([]);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -25,7 +26,7 @@ const MessageInput: React.FC<MessageInputProps> = ({ socket }) => {
     const textArea = document.getElementById('textareaContent') as HTMLTextAreaElement;
     const formatedContent = textArea.value.trim();
     if (formatedContent !== '') {
-      socket.emit('message', { username: "Username", message: formatedContent });
+      socket?.emit('message', { username: username, message: formatedContent });
       textArea.value = '';
     }
   }

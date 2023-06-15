@@ -37,12 +37,11 @@ function Chat() {
 
 useEffect(() => {
   socket?.on('timeoutError', () => {
-    console.log('111')
     setTimeoutConnection(true)
-  })
-  socket?.on('connect', () => setConnected(true))
+  })  
+  socket?.on('userList', () => setConnected(true))
   socket?.on('disconnect', () => setConnected(false))
-},[socket,showChat]);
+},[socket]);
 
   if (showChat){
   return (

@@ -1,34 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Chat em Tempo Real com Socket.IO
 
-## Getting Started
+Este projeto é uma interface desenvolvida utilizando React, para uma aplicação de comunicação em tempo real usando Socket.io. A aplicação permite que os usuários participem de conversas de chat de forma fluida e interativa.
 
-First, run the development server:
+## Principais Recursos
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- **Prompt de Usuário:** A aplicação apresenta um prompt de usuário onde os usuários podem inserir o nome de usuário desejado antes de entrar no chat.
+- **Comunicação em Tempo Real:** O Socket.IO possibilita a comunicação bidirecional em tempo real entre o servidor e os clientes, garantindo a entrega instantânea de mensagens e atualizações.
+- **Exibição de Mensagens:** A interface do chat exibe as mensagens trocadas entre os usuários de forma organizada e em sequência.
+- **Lista de Usuários:** A aplicação fornece uma lista dos usuários conectados no momento, permitindo que os usuários vejam quem mais está presente no chat.
+- **Status da Conexão:** O status da conexão é exibido dinamicamente, indicando se o usuário está conectado ou desconectado.
+- **Tratamento de Tempo Limite:** Um mecanismo de tempo limite é implementado para desconectar usuários inativos após um período especificado de inatividade.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- React
+- TypeScript
+- Socket.IO 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Backend da aplicação: https://github.com/rodriguesrafaelm/socket-chat-server

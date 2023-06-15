@@ -33,7 +33,7 @@ function Chat() {
   setSocket(newSocket);
 }
 }
-, [showChat, username]);
+, [showChat, username, socket]);
 
 useEffect(() => {
   socket?.on('timeoutError', () => {

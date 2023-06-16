@@ -16,5 +16,6 @@ Este projeto é uma interface desenvolvida utilizando React, para uma aplicaçã
 - React
 - TypeScript
 - Socket.IO 
+- Next.js
 
 Backend da aplicação: https://github.com/rodriguesrafaelm/socket-chat-server

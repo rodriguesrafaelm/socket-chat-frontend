@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image'
 import React, {useEffect, useState, FormEvent} from 'react';
 import UserList from './components/UserList';
 import MessageInput from './components/MessageInput';
@@ -69,7 +70,12 @@ useEffect(() => {
   } else {
     return (
       <div className={styles.usernamePrompt}>
-        <div className={styles.usernamePromptTitle}>
+        <Image 
+            src="/draw2.webp" 
+            width={500}
+            height={300}
+            alt="Mão de uma pessoa escrevendo em um papel roxo com uma caneta em cima da tela de um monitor cinza de computador"/>
+        <div className={styles.usernamePromptTitle}>      
           <p>Socket.io simple chat</p>
         </div>
         <form onSubmit={handleUsernameSubmit}>

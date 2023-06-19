@@ -1,4 +1,5 @@
 # Chat em Tempo Real com Socket.IO
+###### *Interface puramente demonstrativa, o foco do aplicativo foi o desenvolvimento do backend usando socket.io.*
 
 Este projeto é uma interface desenvolvida utilizando React, para uma aplicação de comunicação em tempo real usando Socket.io. A aplicação permite que os usuários participem de conversas de chat de forma fluida e interativa.
 
